@@ -1,0 +1,40 @@
+
+spr_minelight.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+mine_1
+  rotate: true
+  xy: 112, 24
+  size: 35, 51
+  orig: 35, 51
+  offset: 0, 0
+  index: -1
+mine_2
+  rotate: false
+  xy: 2, 2
+  size: 61, 57
+  orig: 61, 57
+  offset: 0, 0
+  index: -1
+mine_3
+  rotate: false
+  xy: 165, 21
+  size: 47, 38
+  orig: 47, 38
+  offset: 0, 0
+  index: -1
+mine_shine1
+  rotate: false
+  xy: 65, 14
+  size: 45, 45
+  orig: 45, 45
+  offset: 0, 0
+  index: -1
+mine_shine2
+  rotate: false
+  xy: 214, 34
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1

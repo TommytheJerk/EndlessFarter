@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_darkness</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -36,6 +36,9 @@ part_type_shape(p_mine,pt_shape_flare)
 part_type_colour_mix(p_mine,c_red,c_red)
 part_type_size(p_mine,0.1,0.1,0,0)
 alarm[5]=random(5)
+lights=instance_create(x,y,obj_mine_lights)
+lights.root=self
+lights.image_index=image_index
 </string>
           </argument>
         </arguments>

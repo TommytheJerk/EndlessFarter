@@ -2,7 +2,7 @@
 <sprite>
   <type>2</type>
   <xorig>56</xorig>
-  <yorigin>51</yorigin>
+  <yorigin>49</yorigin>
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
@@ -10,7 +10,7 @@
   <bbox_left>0</bbox_left>
   <bbox_right>112</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>101</bbox_bottom>
+  <bbox_bottom>99</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,9 +18,9 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>113</width>
-  <height>102</height>
+  <height>100</height>
   <frames>
-    <frame index="0">images\spr_mine_0.png</frame>
+    <frame index="0">images\spr_minelight_0.png</frame>
   </frames>
-  <SpineFile>images\spr_mine.json</SpineFile>
+  <SpineFile>images\spr_minelight.json</SpineFile>
 </sprite>

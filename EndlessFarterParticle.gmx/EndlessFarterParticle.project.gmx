@@ -15,6 +15,7 @@
     <sprite>sprites\spr_explosion</sprite>
     <sprite>sprites\spr_checkpoint</sprite>
     <sprite>sprites\spr_smoke</sprite>
+    <sprite>sprites\spr_minelight</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -54,6 +55,8 @@
     <object>objects\obj_mine_master</object>
     <object>objects\obj_grenade</object>
     <object>objects\obj_explosion</object>
+    <object>objects\obj_darkness</object>
+    <object>objects\obj_mine_lights</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
