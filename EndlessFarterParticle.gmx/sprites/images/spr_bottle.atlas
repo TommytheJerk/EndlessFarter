@@ -1,0 +1,19 @@
+
+spr_bottle.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+collectable
+  rotate: false
+  xy: 90, 48
+  size: 37, 44
+  orig: 93, 109
+  offset: 27, 34
+  index: -1
+collectable_shine
+  rotate: false
+  xy: 2, 2
+  size: 86, 90
+  orig: 171, 180
+  offset: 43, 45
+  index: -1

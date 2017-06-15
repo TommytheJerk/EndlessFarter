@@ -1,0 +1,12 @@
+
+spr_grenade.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bomb
+  rotate: false
+  xy: 2, 2
+  size: 44, 45
+  orig: 44, 45
+  offset: 0, 0
+  index: -1

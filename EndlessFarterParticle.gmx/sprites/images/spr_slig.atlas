@@ -1,0 +1,159 @@
+
+spr_slig.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+slig_arm_left
+  rotate: true
+  xy: 185, 151
+  size: 59, 110
+  orig: 59, 110
+  offset: 0, 0
+  index: -1
+slig_arm_right
+  rotate: false
+  xy: 127, 140
+  size: 56, 103
+  orig: 56, 103
+  offset: 0, 0
+  index: -1
+slig_breather
+  rotate: false
+  xy: 127, 101
+  size: 40, 37
+  orig: 40, 37
+  offset: 0, 0
+  index: -1
+slig_copterblade1
+  rotate: false
+  xy: 2, 469
+  size: 301, 41
+  orig: 301, 41
+  offset: 0, 0
+  index: -1
+slig_copterblade2
+  rotate: false
+  xy: 2, 426
+  size: 301, 41
+  orig: 301, 41
+  offset: 0, 0
+  index: -1
+slig_copterblade3
+  rotate: false
+  xy: 305, 469
+  size: 301, 41
+  orig: 301, 41
+  offset: 0, 0
+  index: -1
+slig_copterblade4
+  rotate: false
+  xy: 2, 383
+  size: 301, 41
+  orig: 301, 41
+  offset: 0, 0
+  index: -1
+slig_engine
+  rotate: false
+  xy: 2, 83
+  size: 123, 160
+  orig: 123, 160
+  offset: 0, 0
+  index: -1
+slig_eye
+  rotate: false
+  xy: 2, 2
+  size: 93, 79
+  orig: 93, 79
+  offset: 0, 0
+  index: -1
+slig_hand_left
+  rotate: false
+  xy: 934, 442
+  size: 83, 68
+  orig: 83, 68
+  offset: 0, 0
+  index: -1
+slig_hand_right
+  rotate: true
+  xy: 97, 2
+  size: 79, 70
+  orig: 79, 70
+  offset: 0, 0
+  index: -1
+slig_head
+  rotate: false
+  xy: 2, 245
+  size: 183, 136
+  orig: 183, 136
+  offset: 0, 0
+  index: -1
+slig_hip
+  rotate: true
+  xy: 187, 212
+  size: 169, 106
+  orig: 169, 106
+  offset: 0, 0
+  index: -1
+slig_lever
+  rotate: false
+  xy: 305, 364
+  size: 175, 103
+  orig: 175, 103
+  offset: 0, 0
+  index: -1
+slig_mask
+  rotate: false
+  xy: 482, 368
+  size: 152, 99
+  orig: 152, 99
+  offset: 0, 0
+  index: -1
+slig_masknozzle
+  rotate: false
+  xy: 817, 420
+  size: 115, 90
+  orig: 115, 90
+  offset: 0, 0
+  index: -1
+slig_shoulder_left
+  rotate: false
+  xy: 587, 291
+  size: 64, 75
+  orig: 64, 75
+  offset: 0, 0
+  index: -1
+slig_shoulder_right
+  rotate: false
+  xy: 487, 276
+  size: 98, 90
+  orig: 98, 90
+  offset: 0, 0
+  index: -1
+slig_tentacle1
+  rotate: false
+  xy: 426, 245
+  size: 59, 117
+  orig: 59, 117
+  offset: 0, 0
+  index: -1
+slig_tentacle2
+  rotate: true
+  xy: 636, 372
+  size: 68, 156
+  orig: 68, 156
+  offset: 0, 0
+  index: -1
+slig_tentacle3
+  rotate: true
+  xy: 636, 442
+  size: 68, 179
+  orig: 68, 179
+  offset: 0, 0
+  index: -1
+slig_torso
+  rotate: false
+  xy: 295, 230
+  size: 129, 132
+  orig: 129, 132
+  offset: 0, 0
+  index: -1
