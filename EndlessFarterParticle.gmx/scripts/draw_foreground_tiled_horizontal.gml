@@ -19,6 +19,6 @@
     for (i=left; i<right; i+=1)
     {
         draw_background(back,xx mod width+width*i,yy);
-        //background_foreground[0] = false;
+        //background_foreground[0] = true;
     };
  }

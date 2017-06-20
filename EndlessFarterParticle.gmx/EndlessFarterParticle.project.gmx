@@ -31,6 +31,7 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\draw_background_tiled_horizontal.gml</script>
+    <script>scripts\draw_foreground_tiled_horizontal.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="mines">
