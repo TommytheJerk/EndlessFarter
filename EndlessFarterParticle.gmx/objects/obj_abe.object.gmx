@@ -26,9 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>// Speed limiter
-    if(speed &gt; 8)
+    if(speed &gt; max_speed)
     {
-        speed=8;
+        speed=max_speed;
     }
 
 // Falling
@@ -220,7 +220,7 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.playerAngle = 100;
+            <string>global.playerAngle = 100; //This sets the jump angle.
 isDashing = false;
 isRising = false; //IsDashing prevents additional moves whilst dashing, same with the others.
 isStarting = true; //IsStarting is Abe's starting state.
@@ -233,7 +233,7 @@ image_speed = 1;
 global.gas = 1500000; 
 global.alarm[0] = 60; //What is this one for...
 skeleton_animation_set('idle_loop') //Idle animation.
-
+max_speed=8
 x = xstart
 y = room_height / 2 //Obviously sets Abe's starting position, such that he is always dead in the middle of the room, but at the same x coordinate.
 </string>
@@ -384,6 +384,7 @@ motion_set(0,0)
             <kind>1</kind>
             <string>if (!isDashing)
 {
+max_speed=8
 isRising = true;
 skeleton_animation_set('dash_loop')
 }
@@ -441,8 +442,13 @@ skeleton_animation_set('dash_loop')
     
     if(global.gas &gt; 0 and !global.stopMov)
     {
-    speed=0;
-    motion_add(global.playerAngle,8);
+    
+    //speed=0;
+    reset=hspeed
+    speed=0
+    //motion_add(global.playerAngle,8);
+    vspeed=-8
+    hspeed=reset/2
     isStarting = false;
     }
     skeleton_animation_set('dash_vertical');
@@ -475,7 +481,8 @@ if(global.gas &gt; 0 and !global.stopMov)
 isDashing = true;
 isStarting = false;
 isRising = false;
-motion_set(180,5);
+motion_set(180,max_speed-3);
+max_speed+=1
 skeleton_animation_set('dash_horizontal')
 }
 </string>
