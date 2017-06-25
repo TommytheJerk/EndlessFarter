@@ -30,7 +30,7 @@ draw_location=view_xview[view_current]+view_wview[view_current]-backwidth+(room_
 cloud_location1=view_xview[view_current]+view_wview[view_current]-backwidth+7*(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
 cloud_location2=view_xview[view_current]+view_wview[view_current]-backwidth+10*(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
 cloud_location3=view_xview[view_current]+view_wview[view_current]-backwidth+14*(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
-
+color=make_color_hsv(0,0,view_xview[view_current]/(room_width)*255)
 </string>
           </argument>
         </arguments>
@@ -61,14 +61,19 @@ cloud_location3=view_xview[view_current]+view_wview[view_current]-backwidth+14*(
 
 //draw_background_tiled_horizontal(background0,view_xview[view_current]/1.05-400,view_yview[view_current]); // Draw slower layer
 backwidth=background_get_width(background0)
-draw_set_alpha(view_xview[view_current]/(room_width))
+
+
 //draw_foreground_tiled_horizontal(background2,cloud_location1,view_yview[view_current]); // Draw slower layer
-draw_foreground_tiled_horizontal(background3,cloud_location2,view_yview[view_current]); // Draw slower layer
-draw_foreground_tiled_horizontal(background4,cloud_location3,view_yview[view_current]); // Draw slower layer
+//draw_foreground_tiled_horizontal(background3,cloud_location2,view_yview[view_current]); // Draw slower layer
+draw_background_tiled_ext(background3,cloud_location2,view_yview[view_current],1,1,color,1); // Draw slower layer
+draw_background_tiled_ext(background4,cloud_location3,view_yview[view_current],1,1,color,1);
+draw_background_tiled_ext(background2,cloud_location1,view_yview[view_current],1,1,color,1);
+
+//draw_foreground_tiled_horizontal(background4,cloud_location3,view_yview[view_current]); // Draw slower layer
 //draw_foreground_tiled_horizontal(background5,draw_location,view_yview[view_current]); // Draw slower layer
-draw_background_tiled(background2,cloud_location1,view_yview[view_current]);
-draw_background_tiled(background5,draw_location,view_yview[view_current]);
-draw_set_alpha(1)
+//draw_background_tiled(background2,cloud_location1,view_yview[view_current]);
+//draw_background_tiled(background5,draw_location,view_yview[view_current]);
+
 //If this code is unclear, ask Oddey.
 //Basically, we draw the background at the relevant view, but pushed to the left enough to push it out of view, then push it back so the right touches the right of the screen.
 //Then we account for movement, but we let the start of the view be our real room width.
