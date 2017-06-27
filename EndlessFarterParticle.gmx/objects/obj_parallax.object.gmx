@@ -64,9 +64,7 @@ backwidth=background_get_width(background0)
             <kind>1</kind>
             <string>part_system_position(ps_bg,view_xview[view_current]+view_wview[view_current]-1214+(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current]),0)
 part_particles_create(p_smoke,128,room_height,p_smoke,choose(1,0,0))
-backwidth=background_get_width(background0)
-draw_location=view_xview[view_current]+view_wview[view_current]-backwidth+(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
-rf_location=view_xview[view_current]+view_wview[view_current]-1214+(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
+
 </string>
           </argument>
         </arguments>
@@ -96,7 +94,9 @@ rf_location=view_xview[view_current]+view_wview[view_current]-1214+(room_width-v
  ***************************************************/
 
 //draw_background_tiled_horizontal(background0,view_xview[view_current]/1.05-400,view_yview[view_current]); // Draw slower layer
-
+backwidth=background_get_width(background0)
+draw_location=view_xview[view_current]+view_wview[view_current]-backwidth+(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
+rf_location=view_xview[view_current]+view_wview[view_current]-1214+(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
 draw_background_tiled_horizontal(background0,draw_location,view_yview[view_current]); // Draw slower layer
 part_system_drawit(ps_bg)
 draw_background(background1,rf_location,view_yview[view_current]); // Draw slower layer

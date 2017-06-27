@@ -8,34 +8,6 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>backwidth=background_get_width(background0)
-draw_location=view_xview[view_current]+view_wview[view_current]-backwidth+(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
-cloud_location1=view_xview[view_current]+view_wview[view_current]-backwidth+7*(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
-cloud_location2=view_xview[view_current]+view_wview[view_current]-backwidth+10*(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
-cloud_location3=view_xview[view_current]+view_wview[view_current]-backwidth+14*(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
-color=make_color_hsv(0,0,view_xview[view_current]/(room_width)*255)
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -61,7 +33,11 @@ color=make_color_hsv(0,0,view_xview[view_current]/(room_width)*255)
 
 //draw_background_tiled_horizontal(background0,view_xview[view_current]/1.05-400,view_yview[view_current]); // Draw slower layer
 backwidth=background_get_width(background0)
-
+draw_location=view_xview[view_current]+view_wview[view_current]-backwidth+(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
+cloud_location1=view_xview[view_current]+view_wview[view_current]-backwidth+7*(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
+cloud_location2=view_xview[view_current]+view_wview[view_current]-backwidth+10*(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
+cloud_location3=view_xview[view_current]+view_wview[view_current]-backwidth+14*(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
+color=make_color_hsv(0,0,view_xview[view_current]/(room_width)*255)
 
 //draw_foreground_tiled_horizontal(background2,cloud_location1,view_yview[view_current]); // Draw slower layer
 //draw_foreground_tiled_horizontal(background3,cloud_location2,view_yview[view_current]); // Draw slower layer
