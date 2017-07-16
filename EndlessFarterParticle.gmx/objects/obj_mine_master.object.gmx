@@ -162,8 +162,11 @@ alarm[5]=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lights.x=x
+            <string>if path_speed!=0
+{
+lights.x=x
 lights.y=y
+}
 </string>
           </argument>
         </arguments>
