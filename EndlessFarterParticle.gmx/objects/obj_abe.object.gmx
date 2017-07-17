@@ -444,11 +444,10 @@ skeleton_animation_set('dash_loop')
     {
     
     //speed=0;
-    reset=hspeed
     speed=0
     //motion_add(global.playerAngle,8);
     vspeed=-8
-    hspeed=reset/2
+    hspeed=-sqrt(max_speed^2-vspeed^2)
     isStarting = false;
     }
     skeleton_animation_set('dash_vertical');
