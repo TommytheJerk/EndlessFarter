@@ -220,7 +220,8 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.playerAngle = 100; //This sets the jump angle.
+            <string>
+global.playerAngle = 100; //This sets the jump angle.
 isDashing = false;
 isRising = false; //IsDashing prevents additional moves whilst dashing, same with the others.
 isStarting = true; //IsStarting is Abe's starting state.
@@ -236,6 +237,7 @@ skeleton_animation_set('idle_loop') //Idle animation.
 max_speed=8
 x = xstart
 y = room_height / 2 //Obviously sets Abe's starting position, such that he is always dead in the middle of the room, but at the same x coordinate.
+
 </string>
           </argument>
         </arguments>

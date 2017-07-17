@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>counter_mine = 0;
+            <string>
+counter_mine = 0;
 image_index=random(180)
 ps_mine=part_system_create()
 part_system_depth(ps_mine,5)
@@ -124,7 +125,7 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>//Checks to see if it's moving or stationary.
-if path_speed!=0
+if path_speed!=0 || speed!=0
 {
 part_particles_create(ps_mine,x-56+8,y-51+38,p_mine,1)
 part_particles_create(ps_mine,x-56+28,y-51+4,p_mine,1)
@@ -162,7 +163,7 @@ alarm[5]=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if path_speed!=0
+            <string>if path_speed!=0 || speed!=0
 {
 lights.x=x
 lights.y=y
@@ -194,6 +195,29 @@ lights.y=y
 alarm[10] = 1
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>part_particles_clear(ps_mine)
 </string>
           </argument>
         </arguments>
