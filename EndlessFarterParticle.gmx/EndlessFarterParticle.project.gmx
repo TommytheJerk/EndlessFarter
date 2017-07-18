@@ -41,6 +41,10 @@
         <object>objects\obj_mine_vertical1</object>
         <object>objects\obj_mine_vertical2</object>
         <object>objects\obj_mine_vertical3</object>
+        <object>objects\obj_mine_moving_smart_down</object>
+        <object>objects\obj_mine_moving_smart_up</object>
+        <object>objects\obj_mine_moving_smart_left</object>
+        <object>objects\obj_mine_moving_smart_right</object>
         <object>objects\obj_mine_moving_smart</object>
       </objects>
       <objects name="circling">

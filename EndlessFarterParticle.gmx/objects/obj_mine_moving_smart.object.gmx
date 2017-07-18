@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>minespeed=2
-vspeed=minespeed
 turning=0
 </string>
           </argument>
