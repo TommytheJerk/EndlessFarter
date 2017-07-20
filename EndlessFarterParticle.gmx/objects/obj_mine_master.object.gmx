@@ -125,7 +125,9 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>//Checks to see if it's moving or stationary.
-if path_speed!=0 || speed!=0
+if path_speed!=0 || speed!=0 
+{
+if x&gt;=view_xview[view_current]-256 &amp;&amp; x&lt;=view_xview[view_current]+256+view_wview
 {
 part_particles_create(ps_mine,x-56+8,y-51+38,p_mine,1)
 part_particles_create(ps_mine,x-56+28,y-51+4,p_mine,1)
@@ -139,6 +141,7 @@ part_particles_create(ps_mine,x-56+73,y-51+95,p_mine,1)
 part_particles_create(ps_mine,x-56+26,y-51+94,p_mine,1)
 part_particles_create(ps_mine,x-56+7,y-51+78,p_mine,1)
 part_particles_create(ps_mine,x-56+3,y-51+60,p_mine,1)
+}
 alarm[5]=1
 }
 </string>
