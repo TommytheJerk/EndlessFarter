@@ -38,6 +38,7 @@
     <objects name="mines">
       <objects name="vertical">
         <object>objects\obj_mine_vertical_bouncer</object>
+        <object>objects\obj_mine_horizontal_bouncer</object>
         <object>objects\obj_mine_vertical1</object>
         <object>objects\obj_mine_vertical2</object>
         <object>objects\obj_mine_vertical3</object>
