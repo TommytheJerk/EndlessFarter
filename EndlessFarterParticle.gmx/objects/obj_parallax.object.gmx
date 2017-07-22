@@ -88,7 +88,6 @@ part_particles_create(p_smoke,128,room_height,p_smoke,choose(1,0,0))
           <argument>
             <kind>1</kind>
             <string>part_particles_clear(ps_bg)
-part_system_destroy(ps_bg)
 </string>
           </argument>
         </arguments>

@@ -278,7 +278,6 @@ part_particles_create(ps_slig, x-25, y+5, p_smoke, floor(random(2)))
           <argument>
             <kind>1</kind>
             <string>part_particles_clear(ps_slig)
-part_system_destroy(ps_slig)
 </string>
           </argument>
         </arguments>

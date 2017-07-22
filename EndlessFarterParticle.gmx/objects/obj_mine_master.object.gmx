@@ -211,7 +211,6 @@ lights.y=y
           <argument>
             <kind>1</kind>
             <string>part_particles_clear(ps_mine)
-part_system_destroy(ps_mine)
 </string>
           </argument>
         </arguments>
