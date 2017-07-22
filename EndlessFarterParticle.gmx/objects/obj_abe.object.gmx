@@ -104,6 +104,9 @@
     global.stopMov = true; //Stops additional movement from player.
     motion_set(0,0); //Stops all movement.
     image_alpha = 0 //Fades out Abe briefly, as opposed to deleting him.
+    
+    other.alarm[11] = 10
+    other.already_touched = true
 }
 </string>
           </argument>
