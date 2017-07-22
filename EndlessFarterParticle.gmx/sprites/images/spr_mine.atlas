@@ -3,17 +3,122 @@ spr_mine.png
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
+mine_1
+  rotate: false
+  xy: 428, 142
+  size: 35, 51
+  orig: 35, 51
+  offset: 0, 0
+  index: -1
+mine_10
+  rotate: false
+  xy: 291, 42
+  size: 64, 24
+  orig: 64, 24
+  offset: 0, 0
+  index: -1
+mine_11
+  rotate: false
+  xy: 226, 30
+  size: 63, 36
+  orig: 63, 36
+  offset: 0, 0
+  index: -1
+mine_12
+  rotate: false
+  xy: 450, 196
+  size: 42, 58
+  orig: 42, 58
+  offset: 0, 0
+  index: -1
+mine_2
+  rotate: false
+  xy: 365, 136
+  size: 61, 57
+  orig: 61, 57
+  offset: 0, 0
+  index: -1
+mine_3
+  rotate: false
+  xy: 291, 2
+  size: 47, 38
+  orig: 47, 38
+  offset: 0, 0
+  index: -1
+mine_4
+  rotate: true
+  xy: 412, 85
+  size: 49, 35
+  orig: 49, 35
+  offset: 0, 0
+  index: -1
+mine_5
+  rotate: true
+  xy: 449, 91
+  size: 49, 40
+  orig: 49, 40
+  offset: 0, 0
+  index: -1
+mine_6
+  rotate: false
+  xy: 412, 40
+  size: 47, 43
+  orig: 47, 43
+  offset: 0, 0
+  index: -1
+mine_7
+  rotate: true
+  xy: 2, 2
+  size: 32, 49
+  orig: 32, 49
+  offset: 0, 0
+  index: -1
+mine_8
+  rotate: true
+  xy: 461, 46
+  size: 43, 39
+  orig: 43, 39
+  offset: 0, 0
+  index: -1
+mine_9
+  rotate: true
+  xy: 365, 69
+  size: 65, 45
+  orig: 65, 45
+  offset: 0, 0
+  index: -1
+mine_center
+  rotate: false
+  xy: 226, 68
+  size: 137, 125
+  orig: 137, 125
+  offset: 0, 0
+  index: -1
+mine_main
+  rotate: false
+  xy: 2, 36
+  size: 222, 218
+  orig: 222, 218
+  offset: 0, 0
+  index: -1
 mine_shine1
   rotate: false
-  xy: 2, 2
+  xy: 465, 149
   size: 45, 45
   orig: 45, 45
   offset: 0, 0
   index: -1
 mine_shine2
   rotate: false
-  xy: 49, 22
+  xy: 53, 9
   size: 25, 25
   orig: 25, 25
+  offset: 0, 0
+  index: -1
+mine_stripe
+  rotate: false
+  xy: 226, 195
+  size: 222, 59
+  orig: 222, 59
   offset: 0, 0
   index: -1

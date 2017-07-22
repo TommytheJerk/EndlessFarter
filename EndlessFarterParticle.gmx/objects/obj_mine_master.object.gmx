@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>
 counter_mine = 0;
+already_touched = false;
 image_index=random(180)
 ps_mine=part_system_create()
 part_system_depth(ps_mine,5)
@@ -83,7 +84,7 @@ instance_destroy()
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="10">
+    <event eventtype="2" enumb="11">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -100,11 +101,27 @@ instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.isDead = true;
-instance_destroy();
+            <string>instance_create(
+    x,
+    y,
+    obj_explosion)
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="2" enumb="5">
@@ -171,33 +188,6 @@ alarm[5]=1
 lights.x=x
 lights.y=y
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_abe">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (!global.isDead)
-{
-alarm[10] = 1
-}
-
 </string>
           </argument>
         </arguments>
