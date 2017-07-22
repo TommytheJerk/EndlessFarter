@@ -70,6 +70,7 @@
             <string>if (global.invincible == false) //See MineMaster code.
 {
     instance_create(x,y,obj_explosion)
+    //TODO CHECK DYING FROM GRENADE, IF IT WORKS CORRECTLY
     global.invincible = true;
     global.stopMov = true;
     motion_set(0,0);
