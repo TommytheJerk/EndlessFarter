@@ -42,9 +42,13 @@
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_black)
-draw_text(10,10, "Fart power: "+string(global.gas));
+draw_text(1120,700, "Fart power: "+string(global.gas));
 draw_set_color(c_white)
-draw_text(9,9, "Fart power: "+string(global.gas));
+draw_text(1119,699, "Fart power: "+string(global.gas));
+
+//draw_sprite(spr_guiBottle, 0, 1150, 500)
+draw_sprite_ext(spr_guiBottle, -1, 1150, 500, 1, 1, 0, c_black, 1)
+draw_sprite_part(spr_guiBottle, -1, 0, (100-global.gas)*sprite_get_height(spr_guiBottle)*0.01,  sprite_get_width(spr_guiBottle), sprite_get_height(spr_guiBottle), 1150, 500+(100-global.gas)*sprite_get_height(spr_guiBottle)*0.01)
 </string>
           </argument>
         </arguments>
