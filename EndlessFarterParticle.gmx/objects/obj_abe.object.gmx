@@ -160,7 +160,9 @@ global.gas = 1500000;
 
 if(!global.stopMov and !isDashing and isRising==true)
 {
-    global.gas -= 0.1;
+    if(!global.invincible){    
+        global.gas -= 0.1;
+    }
     if global.gas &gt; 0
     {
     speed=0;
@@ -451,7 +453,9 @@ skeleton_animation_set('dash_loop')
             <kind>1</kind>
             <string>if (!isDashing)
 {
-    global.gas -= 10;
+    if(!global.invincible){ 
+        global.gas -= 10;
+    }
     
     if(global.gas &gt; 0 and !global.stopMov)
     {
@@ -487,7 +491,9 @@ skeleton_animation_set('dash_loop')
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.gas-=5
+            <string>if(!global.invincible){ 
+    global.gas-=5
+}
 if(global.gas &gt; 0 and !global.stopMov)
 {
 isDashing = true;
