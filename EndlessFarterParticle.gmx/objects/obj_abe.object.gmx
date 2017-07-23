@@ -108,6 +108,8 @@
     
     other.alarm[11] = 10
     other.already_touched = true
+    global.initialx = view_xview[view_current]
+    global.initialy = view_yview[view_current]
 }
 </string>
           </argument>
