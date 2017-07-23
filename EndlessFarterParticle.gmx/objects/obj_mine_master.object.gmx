@@ -29,7 +29,32 @@
 counter_mine = 0;
 already_touched = false;
 image_index=random(180)
-ps_mine=part_system_create()
+
+alarm[5]=2
+lights=instance_create(x,y,obj_mine_lights)
+lights.root=self
+lights.image_index=image_index
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ps_mine=part_system_create()
 part_system_depth(ps_mine,5)
 p_mine=part_type_create()
 part_type_alpha2(p_mine,1,0)
@@ -37,10 +62,7 @@ part_type_life(p_mine,100,100)
 part_type_shape(p_mine,pt_shape_flare)
 part_type_colour_mix(p_mine,c_red,c_red)
 part_type_size(p_mine,0.1,0.1,0,0)
-alarm[5]=2
-lights=instance_create(x,y,obj_mine_lights)
-lights.root=self
-lights.image_index=image_index
+//draw_skeleton_time(spr_mine,'idle_loop',skeleton_skin_get(),2,x,y,image_xscale, image_yscale, image_angle, c_white,image_alpha)
 </string>
           </argument>
         </arguments>
@@ -211,39 +233,13 @@ lights.y=y
           <argument>
             <kind>1</kind>
             <string>part_particles_clear(ps_mine)
-part_system_destroy(ps_mine)
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-counter_mine = 0;
-counter_flag = false;
-//draw_skeleton_time(spr_mine,'idle_loop',skeleton_skin_get(),2,x,y,image_xscale, image_yscale, image_angle, c_white,image_alpha)
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>

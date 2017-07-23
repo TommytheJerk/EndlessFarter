@@ -441,7 +441,7 @@ skeleton_animation_set('dash_loop')
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!isDashing)
+            <string>
 {
     global.gas -= 10;
     
@@ -454,6 +454,7 @@ skeleton_animation_set('dash_loop')
     vspeed=-8
     hspeed=-sqrt(max_speed^2-vspeed^2)
     isStarting = false;
+    isDashing = false;
     }
     skeleton_animation_set('dash_vertical');
 }
