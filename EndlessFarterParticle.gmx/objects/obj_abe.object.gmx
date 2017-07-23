@@ -75,6 +75,9 @@
     global.stopMov = true;
     motion_set(0,0);
     image_alpha = 0
+    
+    global.initialx = view_xview[view_current]
+    global.initialy = view_yview[view_current]
 }
 </string>
           </argument>
@@ -108,6 +111,8 @@
     
     other.alarm[11] = 10
     other.already_touched = true
+    global.initialx = view_xview[view_current]
+    global.initialy = view_yview[view_current]
 }
 </string>
           </argument>
@@ -273,6 +278,9 @@ y = room_height / 2 //Obviously sets Abe's starting position, such that he is al
     global.stopMov = true; //Stops additional movement from player.
     motion_set(0,0); //Stops all movement.
     image_alpha = 0 //Fades out Abe briefly, as opposed to deleting him.
+    
+    global.initialx = view_xview[view_current]
+    global.initialy = view_yview[view_current]
 }
 </string>
           </argument>
