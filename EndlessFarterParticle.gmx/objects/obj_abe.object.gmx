@@ -70,6 +70,7 @@
             <string>if (global.invincible == false) //See MineMaster code.
 {
     instance_create(x,y,obj_explosion)
+    //TODO CHECK DYING FROM GRENADE, IF IT WORKS CORRECTLY
     global.invincible = true;
     global.stopMov = true;
     motion_set(0,0);
@@ -159,7 +160,9 @@ global.gas = 1500000;
 
 if(!global.stopMov and !isDashing and isRising==true)
 {
-    global.gas -= 0.1;
+    if(!global.invincible){    
+        global.gas -= 0.1;
+    }
     if global.gas &gt; 0
     {
     speed=0;
@@ -263,8 +266,41 @@ y = room_height / 2 //Obviously sets Abe's starting position, such that he is al
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_restart()
+            <string>if (global.invincible == false)
+{
+    instance_create(x,y,obj_explosion)
+    global.invincible = true; //Prevents additional explosions from being created.
+    global.stopMov = true; //Stops additional movement from player.
+    motion_set(0,0); //Stops all movement.
+    image_alpha = 0 //Fades out Abe briefly, as opposed to deleting him.
+}
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="90">
+      <action>
+        <libid>1</libid>
+        <id>109</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move_to</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>35264</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>200</string>
           </argument>
         </arguments>
       </action>
@@ -398,32 +434,6 @@ skeleton_animation_set('dash_loop')
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="18">
-      <action>
-        <libid>1</libid>
-        <id>109</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move_to</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>7000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>200</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="9" enumb="17">
       <action>
         <libid>1</libid>
@@ -443,7 +453,9 @@ skeleton_animation_set('dash_loop')
             <kind>1</kind>
             <string>
 {
-    global.gas -= 10;
+    if(!global.invincible){ 
+        global.gas -= 10;
+    }
     
     if(global.gas &gt; 0 and !global.stopMov)
     {
@@ -480,7 +492,9 @@ skeleton_animation_set('dash_loop')
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.gas-=5
+            <string>if(!global.invincible){ 
+    global.gas-=5
+}
 if(global.gas &gt; 0 and !global.stopMov)
 {
 isDashing = true;
