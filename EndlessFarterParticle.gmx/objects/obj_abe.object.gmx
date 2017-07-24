@@ -70,6 +70,7 @@
             <string>if (global.invincible == false) //See MineMaster code.
 {
     instance_create(x,y,obj_explosion)
+    instance_create(x,y,obj_fader_death)
     //TODO CHECK DYING FROM GRENADE, IF IT WORKS CORRECTLY
     global.invincible = true;
     global.stopMov = true;
@@ -104,6 +105,7 @@
             <string>if (global.invincible == false)
 {
     instance_create(x,y,obj_explosion)
+    instance_create(x,y,obj_fader_death)
     global.invincible = true; //Prevents additional explosions from being created.
     global.stopMov = true; //Stops additional movement from player.
     motion_set(0,0); //Stops all movement.
@@ -248,7 +250,7 @@ skeleton_animation_set('idle_loop') //Idle animation.
 max_speed=8
 x = xstart
 y = room_height / 2 //Obviously sets Abe's starting position, such that he is always dead in the middle of the room, but at the same x coordinate.
-
+instance_create(x,y,obj_fader_birth)
 </string>
           </argument>
         </arguments>

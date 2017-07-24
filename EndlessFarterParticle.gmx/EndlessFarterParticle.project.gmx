@@ -69,6 +69,8 @@
     <object>objects\obj_explosion</object>
     <object>objects\obj_darkness</object>
     <object>objects\obj_mine_lights</object>
+    <object>objects\obj_fader_birth</object>
+    <object>objects\obj_fader_death</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\varrok1</room>
