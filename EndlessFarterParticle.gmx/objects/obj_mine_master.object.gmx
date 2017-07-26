@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>minespeed=0
 counter_mine = 0;
 already_touched = false;
 image_index=random(180)
@@ -164,7 +164,7 @@ instance_destroy()
           <argument>
             <kind>1</kind>
             <string>//Checks to see if it's moving or stationary.
-if path_speed!=0 || speed!=0 
+if path_speed!=0 || minespeed!=0 
 {
 if x&gt;=view_xview[view_current]-256 &amp;&amp; x&lt;=view_xview[view_current]+256+view_wview
 {
