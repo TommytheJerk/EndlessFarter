@@ -131,11 +131,11 @@ alarm[0]=1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if x&lt;view_xview[view_current]-128 || x&gt;view_xview[view_current]+view_wview[view_current]+128
+            <string>if x&lt;view_xview[view_current]-256 || x&gt;view_xview[view_current]+view_wview[view_current]+256
 {
 speed=0
 }
-if x&gt;view_xview[view_current]-64 &amp;&amp; x&lt;view_xview[view_current]+view_wview[view_current]+64
+if x&gt;view_xview[view_current]-256 &amp;&amp; x&lt;view_xview[view_current]+view_wview[view_current]+256
 {
 speed=minespeed
 }

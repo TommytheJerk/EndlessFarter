@@ -59,9 +59,10 @@ part_system_depth(ps_mine,5)
 p_mine=part_type_create()
 part_type_alpha2(p_mine,1,0)
 part_type_life(p_mine,100,100)
-part_type_shape(p_mine,pt_shape_flare)
+//part_type_shape(p_mine,pt_shape_flare)
+part_type_sprite(p_mine,spr_minelight,false,false,false)
 part_type_colour_mix(p_mine,c_red,c_red)
-part_type_size(p_mine,0.1,0.1,0,0)
+part_type_size(p_mine,1,1,0,0)
 //draw_skeleton_time(spr_mine,'idle_loop',skeleton_skin_get(),2,x,y,image_xscale, image_yscale, image_angle, c_white,image_alpha)
 </string>
           </argument>
@@ -168,18 +169,19 @@ if path_speed!=0 || minespeed!=0
 {
 if x&gt;=view_xview[view_current]-256 &amp;&amp; x&lt;=view_xview[view_current]+256+view_wview
 {
-part_particles_create(ps_mine,x-56+8,y-51+38,p_mine,1)
-part_particles_create(ps_mine,x-56+28,y-51+4,p_mine,1)
-part_particles_create(ps_mine,x-56+77,y-51+4,p_mine,1)
-part_particles_create(ps_mine,x-56+96,y-51+11,p_mine,1)
-part_particles_create(ps_mine,x-56+100,y-51+31,p_mine,1)
-part_particles_create(ps_mine,x-56+105,y-51+60,p_mine,1)
-part_particles_create(ps_mine,x-56+100,y-51+83,p_mine,1)
-part_particles_create(ps_mine,x-56+85,y-51+80,p_mine,1)
-part_particles_create(ps_mine,x-56+73,y-51+95,p_mine,1)
-part_particles_create(ps_mine,x-56+26,y-51+94,p_mine,1)
-part_particles_create(ps_mine,x-56+7,y-51+78,p_mine,1)
-part_particles_create(ps_mine,x-56+3,y-51+60,p_mine,1)
+//part_particles_create(ps_mine,x-56+8,y-51+38,p_mine,1)
+//part_particles_create(ps_mine,x-56+28,y-51+4,p_mine,1)
+//part_particles_create(ps_mine,x-56+77,y-51+4,p_mine,1)
+//part_particles_create(ps_mine,x-56+96,y-51+11,p_mine,1)
+//part_particles_create(ps_mine,x-56+100,y-51+31,p_mine,1)
+//part_particles_create(ps_mine,x-56+105,y-51+60,p_mine,1)
+//part_particles_create(ps_mine,x-56+100,y-51+83,p_mine,1)
+//part_particles_create(ps_mine,x-56+85,y-51+80,p_mine,1)
+//part_particles_create(ps_mine,x-56+73,y-51+95,p_mine,1)
+//part_particles_create(ps_mine,x-56+26,y-51+94,p_mine,1)
+//part_particles_create(ps_mine,x-56+7,y-51+78,p_mine,1)
+//part_particles_create(ps_mine,x-56+3,y-51+60,p_mine,1)
+part_particles_create(ps_mine,x,y,p_mine,1)
 }
 alarm[5]=1
 }
