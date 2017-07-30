@@ -39,8 +39,96 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>ps_mine=part_system_create()
+part_system_depth(ps_mine,5)
+p_mine_turn=part_type_create()
+part_type_alpha2(p_mine_turn,1,0)
+part_type_life(p_mine_turn,100,100)
+part_type_shape(p_mine_turn,pt_shape_flare)
+//part_type_sprite(p_mine,spr_minelight,false,false,false)
+part_type_colour_mix(p_mine_turn,c_red,c_red)
+part_type_size(p_mine_turn,0.1,0.1,0,0)
+p_mine_strt=part_type_create()
+part_type_alpha2(p_mine_strt,1,0)
+part_type_life(p_mine_strt,100,100)
+part_type_shape(p_mine_strt,pt_shape_line)
+//part_type_sprite(p_mine,spr_minelight,false,false,false)
+part_type_colour_mix(p_mine_strt,c_red,c_red)
+part_type_size(p_mine_strt,0.2,0.2,0,0)
+part_type_orientation(p_mine_strt,direction,direction,0,0,false)
+alarm[5]=2
+//draw_skeleton_time(spr_mine,'idle_loop',skeleton_skin_get(),2,x,y,image_xscale, image_yscale, image_angle, c_white,image_alpha)
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>minespeed=2
 turning=0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Checks to see if it's moving or stationary.
+if path_speed!=0 || minespeed!=0 
+{
+if x&gt;=view_xview[view_current]-256 &amp;&amp; x&lt;=view_xview[view_current]+256+view_wview
+{
+
+{
+part_type_orientation(p_mine_strt,direction,direction,0,0,false)
+part_particles_create(ps_mine,x-56+8,y-51+38,p_mine_strt,1)
+part_particles_create(ps_mine,x-56+28,y-51+4,p_mine_strt,1)
+part_particles_create(ps_mine,x-56+77,y-51+4,p_mine_strt,1)
+part_particles_create(ps_mine,x-56+96,y-51+11,p_mine_strt,1)
+part_particles_create(ps_mine,x-56+100,y-51+31,p_mine_strt,1)
+part_particles_create(ps_mine,x-56+105,y-51+60,p_mine_strt,1)
+part_particles_create(ps_mine,x-56+100,y-51+83,p_mine_strt,1)
+part_particles_create(ps_mine,x-56+85,y-51+80,p_mine_strt,1)
+part_particles_create(ps_mine,x-56+73,y-51+95,p_mine_strt,1)
+part_particles_create(ps_mine,x-56+26,y-51+94,p_mine_strt,1)
+part_particles_create(ps_mine,x-56+7,y-51+78,p_mine_strt,1)
+part_particles_create(ps_mine,x-56+3,y-51+60,p_mine_strt,1)
+alarm[5]=5
+exit
+}
+//part_particles_create(ps_mine,x,y,p_mine,1)
+}
+alarm[5]=1
+}
 </string>
           </argument>
         </arguments>
@@ -249,6 +337,30 @@ hspeed=minespeed
 vspeed=-minespeed
 if other.y&lt;y
 vspeed=minespeed
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>part_particles_clear(ps_mine)
+
 </string>
           </argument>
         </arguments>
