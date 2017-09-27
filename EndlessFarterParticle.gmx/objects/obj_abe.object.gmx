@@ -306,11 +306,11 @@ instance_create(x,y,obj_fader_birth)
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>35264</string>
+            <string>500</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>200</string>
+            <string>400</string>
           </argument>
         </arguments>
       </action>
@@ -496,7 +496,7 @@ skeleton_animation_set('dash_loop')
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -513,6 +513,8 @@ isRising = false;
 motion_set(180,max_speed-3);
 max_speed+=1
 skeleton_animation_set('dash_horizontal')
+} else if(global.gas &lt;= 0){
+skeleton_animation_set('dash_loop') //out of brew animation
 }
 </string>
           </argument>
