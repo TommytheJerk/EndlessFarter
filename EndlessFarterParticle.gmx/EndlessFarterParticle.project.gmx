@@ -25,6 +25,8 @@
     <sprite>sprites\spr_tutorialTip_spacebar</sprite>
     <sprite>sprites\spr_tutorialTip_checkpoint</sprite>
     <sprite>sprites\spr_birds</sprite>
+    <sprite>sprites\spr_inc_bottle_sign</sprite>
+    <sprite>sprites\spr_inc_mine_sign</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -38,6 +40,7 @@
     <path>paths\path_mine_vertical</path>
     <path>paths\path_circle</path>
     <path>paths\path3</path>
+    <path>paths\path4</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\draw_background_tiled_horizontal.gml</script>
@@ -72,8 +75,8 @@
     </objects>
     <object>objects\obj_checkpoint</object>
     <object>objects\obj_abe</object>
+    <object>objects\obj_inc_bottle</object>
     <object>objects\obj_bottle</object>
-    <object>objects\obj_gui</object>
     <object>objects\obj_slig</object>
     <object>objects\obj_parallax</object>
     <object>objects\obj_parallax_clouds</object>
@@ -86,18 +89,24 @@
     <object>objects\obj_fader_death</object>
     <object>objects\obj_tip_master</object>
     <object>objects\obj_birds</object>
-    <objects name="tutorial">
-      <object>objects\obj_tip_spacebar</object>
-      <object>objects\obj_tip_checkpoint</object>
-      <object>objects\obj_tip_shift</object>
-      <object>objects\obj_tip_obstacle</object>
-      <object>objects\obj_tip_collect</object>
-      <object>objects\obj_tip_ctrl</object>
+    <objects name="gui">
+      <object>objects\obj_inc_mine_sign</object>
+      <object>objects\obj_inc</object>
+      <object>objects\obj_inc_bottle_sign</object>
+      <object>objects\obj_gui</object>
+      <objects name="tutorial">
+        <object>objects\obj_tip_spacebar</object>
+        <object>objects\obj_tip_checkpoint</object>
+        <object>objects\obj_tip_shift</object>
+        <object>objects\obj_tip_obstacle</object>
+        <object>objects\obj_tip_collect</object>
+        <object>objects\obj_tip_ctrl</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\tutorial</room>
     <room>rooms\varrok1</room>
+    <room>rooms\tutorial</room>
     <room>rooms\room2</room>
     <room>rooms\room0</room>
     <room>rooms\room1</room>

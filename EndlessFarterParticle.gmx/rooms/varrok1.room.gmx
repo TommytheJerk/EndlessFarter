@@ -53,7 +53,6 @@
   <instances>
     <instance objName="obj_parallax" x="39936" y="-64" name="inst_F34DFB0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_gui" x="39776" y="-64" name="inst_7FCEB9FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_abe" x="39968" y="352" name="inst_CAB81E8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mine_vertical_bouncer" x="39648" y="-64" name="inst_361CD2B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mine_vertical_bouncer" x="39648" y="768" name="inst_134FCFBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mine_moving_smart_up" x="39648" y="672" name="inst_A2F3DFC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -350,6 +349,39 @@
     <instance objName="obj_bottle" x="30752" y="352" name="inst_D3BE151A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bottle" x="29440" y="128" name="inst_57DD7D8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mine_vertical_bouncer" x="28192" y="992" name="inst_BF265E06" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_moving_smart_down" x="26752" y="-352" name="inst_2E04F58D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_moving_smart_down" x="26848" y="-256" name="inst_A0026371" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_moving_smart_down" x="26944" y="-160" name="inst_8A0239D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_moving_smart_up" x="26752" y="1088" name="inst_47A068E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_moving_smart_up" x="26848" y="992" name="inst_46F8E8C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_moving_smart_up" x="26944" y="896" name="inst_777FB7E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_moving_smart_up" x="27040" y="800" name="inst_91726736" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_moving_smart_down" x="27040" y="-64" name="inst_AEAB4464" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_left_move" x="26752" y="736" name="inst_1CF8F64A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_left_move" x="26848" y="640" name="inst_3CFBB506" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_left_move" x="26944" y="544" name="inst_969E1FAF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_left_move" x="27040" y="448" name="inst_724C36AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_right_move" x="26752" y="-32" name="inst_7FA8027F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_right_move" x="26848" y="96" name="inst_CD7D4FB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_right_move" x="26944" y="192" name="inst_68FF91AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_right_move" x="27040" y="288" name="inst_259F2A39" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_inc_bottle" x="24800" y="576" name="inst_FD270D5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_inc_bottle" x="24000" y="352" name="inst_494E44B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_inc_bottle" x="25184" y="128" name="inst_9928F58E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_abe" x="27296" y="352" name="inst_51747C35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_moving_smart_down" x="27136" y="64" name="inst_980132D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_right_move" x="27139" y="394" name="inst_3D488BF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_inc_bottle" x="21472" y="192" name="inst_D3C2C53D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_inc_bottle" x="21472" y="448" name="inst_3426AF00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_master" x="20384" y="64" name="inst_5DF50D9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_master" x="20384" y="160" name="inst_1A117E93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_master" x="20384" y="256" name="inst_953D0E52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_master" x="20384" y="352" name="inst_8E53124A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_master" x="20384" y="448" name="inst_7BF4692C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_master" x="20384" y="544" name="inst_28217C24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_master" x="20384" y="640" name="inst_C15AA8C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_master" x="20384" y="736" name="inst_C939D192" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mine_master" x="20384" y="-32" name="inst_70E1F956" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

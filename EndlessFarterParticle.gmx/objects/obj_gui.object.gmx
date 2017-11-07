@@ -24,6 +24,58 @@
         <isnot>0</isnot>
       </action>
     </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite(spr_inc_bottle_sign,-1, 1150, 500)
+//show_message("Incpos:"+string(incYPos))
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Obj_inc objects can access this variable to tell gui where to draw the inc_signs
+//Clear the damn thing
+for (i=0; i&lt;10; i++)
+{
+global.incBottleYPos[i] = 0
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
@@ -52,7 +104,17 @@ draw_text(1119,699, "Fart power: "+string(global.gas));
 draw_sprite_ext(spr_guiBottle, -1, 1150, 500, 1, 1, 0, c_black, 1)
 draw_sprite_part(spr_guiBottle, -1, 0, (100-global.gas)*sprite_get_height(spr_guiBottle)*0.01,  sprite_get_width(spr_guiBottle), sprite_get_height(spr_guiBottle), 1150, 500+(100-global.gas)*sprite_get_height(spr_guiBottle)*0.01)
 
+//Drawing Mine/Bottle signs
 
+image_speed = 0.03
+for (i=0;i&lt;10;i++)
+{
+    if(global.incBottleYPos[i] != 0)
+    {
+    draw_sprite(spr_inc_bottle_sign,-1, 10, global.incBottleYPos[i]-65) //65 is sprite alignment (arbitrary)
+    //show_message("It got to the part: "+string(i))
+    }
+}
 </string>
           </argument>
         </arguments>
