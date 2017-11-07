@@ -8,23 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="2" enumb="11">
-      <action>
-        <libid>1</libid>
-        <id>223</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_current_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="7" enumb="10">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -41,8 +25,98 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_inc_bottle_sign,-1, 1150, 500)
-//show_message("Incpos:"+string(incYPos))
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (global.levelCompleted)
+{
+    //Do nothing, wait for the player to press a button
+} 
+else
+{
+    room_restart()
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Switch to next level, remove Persistent objects
+
+with (obj_bottle)
+{
+    instance_destroy();
+}
+with (obj_abe)
+{
+    instance_destroy();
+}
+room_goto_next()
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (global.levelCompleted)
+{
+    instance_create(x,y,obj_fader_death)
+    alarm[10] = 250
+}
 </string>
           </argument>
         </arguments>
@@ -71,6 +145,8 @@ for (i=0; i&lt;10; i++)
 {
 global.incBottleYPos[i] = 0
 }
+
+global.levelCompleted = false
 </string>
           </argument>
         </arguments>
@@ -93,67 +169,56 @@ global.incBottleYPos[i] = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_left);
-draw_set_font(font0);
-draw_set_color(c_black)
-draw_text(1120,700, "Fart power: "+string(global.gas));
-draw_set_color(c_white)
-draw_text(1119,699, "Fart power: "+string(global.gas));
-
-//draw_sprite(spr_guiBottle, 0, 1150, 500)
-draw_sprite_ext(spr_guiBottle, -1, 1150, 500, 1, 1, 0, c_black, 1)
-draw_sprite_part(spr_guiBottle, -1, 0, (100-global.gas)*sprite_get_height(spr_guiBottle)*0.01,  sprite_get_width(spr_guiBottle), sprite_get_height(spr_guiBottle), 1150, 500+(100-global.gas)*sprite_get_height(spr_guiBottle)*0.01)
-
-//Drawing Mine/Bottle signs
-
-image_speed = 0.03
-for (i=0;i&lt;10;i++)
+            <string>//Level still going, normal UI
+if (!global.levelCompleted)
 {
-    if(global.incBottleYPos[i] != 0)
+    draw_set_halign(fa_left);
+    draw_set_font(font0);
+    draw_set_color(c_black)
+    draw_text(1120,700, "Fart power: "+string(global.gas));
+    draw_set_color(c_white)
+    draw_text(1119,699, "Fart power: "+string(global.gas));
+    
+    //draw_sprite(spr_guiBottle, 0, 1150, 500)
+    draw_sprite_ext(spr_guiBottle, -1, 1150, 500, 1, 1, 0, c_black, 1)
+    draw_sprite_part(spr_guiBottle, -1, 0, (100-global.gas)*sprite_get_height(spr_guiBottle)*0.01,  sprite_get_width(spr_guiBottle), sprite_get_height(spr_guiBottle), 1150, 500+(100-global.gas)*sprite_get_height(spr_guiBottle)*0.01)
+    
+    //Drawing Mine/Bottle signs
+    
+    image_speed = 0.03
+    for (i=0;i&lt;10;i++)
     {
-    draw_sprite(spr_inc_bottle_sign,-1, 10, global.incBottleYPos[i]-65) //65 is sprite alignment (arbitrary)
-    //show_message("It got to the part: "+string(i))
+        if(global.incBottleYPos[i] != 0)
+        {
+        draw_sprite(spr_inc_bottle_sign,-1, 10, global.incBottleYPos[i]-65) //65 is sprite alignment (arbitrary)
+        //show_message("It got to the part: "+string(i))
+        }
     }
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="66">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-//Background (Congratulation screen)
-draw_set_alpha(0.8);
-draw_set_colour(c_black);
-draw_rectangle_colour(0, window_get_height()*0.2, window_get_width(), window_get_height()*0.8, c_black, c_black, c_black, c_black, false);
-
-//Header Text
-draw_set_halign(fa_center);
-draw_set_color(c_white)
-draw_set_font(font_oddfont);
-draw_text(window_get_width()/2,window_get_height()*0.3, "Congratulations!");
-draw_text_transformed(window_get_width()/2,window_get_height()*0.45, "You suck!", 0.5,0.5,0);
-
-//Details
-draw_set_font(font_oddfont);
-draw_text_transformed(window_get_width()/2,window_get_height()*0.60, "T: Five hours         D: Too many         B: Not enough", 0.4, 0.4,0);
-draw_set_alpha(1);
+//Level Completed Screen
+else
+{
+    draw_set_alpha(0.8);
+    draw_set_colour(c_black);
+    draw_rectangle_colour(0, view_hport[0]*0.2, view_wport[0], view_hport[0]*0.8, c_black, c_black, c_black, c_black, false);
+    
+    //Header Text
+    draw_set_halign(fa_center);
+    draw_set_color(c_white)
+    draw_set_font(font_oddfont);
+    draw_text(view_wport[0]/2,view_hport[0]*0.3, "Congratulations!");
+    draw_text_transformed(view_wport[0]/2,view_hport[0]*0.45, "You suck!", 0.5,0.5,0);
+    
+    //Details
+    draw_set_font(font_oddfont);
+    draw_text_transformed(view_wport[0]/2,view_hport[0]*0.58, "T: Five hours         D: Too many         B: Not enough", 0.4, 0.4,0);
+    draw_set_alpha(1);
+    
+    //Press Enter to Continue
+    draw_set_font(font_oddfont);
+    draw_text_transformed(view_wport[0]/2,view_hport[0]*0.70, "Press Enter to continue", 0.3, 0.3,0);
+    draw_set_alpha(1);
+}
 </string>
           </argument>
         </arguments>

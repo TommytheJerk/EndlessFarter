@@ -14,6 +14,7 @@
     <sprite>sprites\spr_grenade</sprite>
     <sprite>sprites\spr_explosion</sprite>
     <sprite>sprites\spr_checkpoint</sprite>
+    <sprite>sprites\spr_levelFinish</sprite>
     <sprite>sprites\spr_smoke</sprite>
     <sprite>sprites\spr_minelight</sprite>
     <sprite>sprites\sprite10</sprite>
@@ -40,7 +41,6 @@
     <path>paths\path_mine_vertical</path>
     <path>paths\path_circle</path>
     <path>paths\path3</path>
-    <path>paths\path4</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\draw_background_tiled_horizontal.gml</script>
@@ -74,6 +74,7 @@
       </objects>
     </objects>
     <object>objects\obj_checkpoint</object>
+    <object>objects\obj_levelConpleted</object>
     <object>objects\obj_abe</object>
     <object>objects\obj_inc_bottle</object>
     <object>objects\obj_bottle</object>

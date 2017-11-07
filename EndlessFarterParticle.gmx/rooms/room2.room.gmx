@@ -364,7 +364,6 @@
     <instance objName="obj_mine_master" x="17024" y="320" name="inst_FB7683B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mine_master" x="16864" y="352" name="inst_2905D22A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mine_master" x="16672" y="608" name="inst_C2EE62FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_checkpoint" x="11328" y="0" name="inst_020366D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bottle" x="19296" y="224" name="inst_21CAA2EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bottle" x="17824" y="320" name="inst_DDD03BFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mine_moving_smart_up" x="15872" y="544" name="inst_30DEAD3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -442,6 +441,7 @@
     <instance objName="obj_mine_left_move" x="12192" y="32" name="inst_2FA82E01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mine_left_move" x="11968" y="32" name="inst_0CACC4AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mine_right_move" x="12192" y="160" name="inst_044E55CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_levelConpleted" x="11232" y="0" name="inst_6F569AAF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

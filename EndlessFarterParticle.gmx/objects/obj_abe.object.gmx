@@ -107,7 +107,11 @@
             <string>if (global.invincible == false)
 {
     instance_create(x,y,obj_explosion)
-    instance_create(x,y,obj_fader_death)
+    
+    if (!global.levelCompleted)
+    {
+        instance_create(x,y,obj_fader_death)
+    }
     global.invincible = true; //Prevents additional explosions from being created.
     global.stopMov = true; //Stops additional movement from player.
     motion_set(0,0); //Stops all movement.
