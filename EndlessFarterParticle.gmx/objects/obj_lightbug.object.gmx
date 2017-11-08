@@ -92,8 +92,8 @@ goto=point_direction(x,y,xstart-10,ystart+16)/360*2*pi
 gotodis=point_distance(x,y,xstart-10,ystart+16)/20
 dir=dir+(random(40)-20)/360*2*pi
 dis=random(2)+2
-x=x+dis*cos(dir)+gotodis*cos(goto)/maxphrase
-y=y-dis*sin(dir)-gotodis*sin(goto)
+x=x+dis*cos(dir)/2+gotodis*cos(goto)/maxphrase/2
+y=y-dis*sin(dir)/2-gotodis*sin(goto)/2
 
 }
 if state==1
