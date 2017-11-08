@@ -28,6 +28,7 @@
     <sprite>sprites\spr_birds</sprite>
     <sprite>sprites\spr_inc_bottle_sign</sprite>
     <sprite>sprites\spr_inc_mine_sign</sprite>
+    <sprite>sprites\spr_lightbug</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -46,6 +47,7 @@
     <script>scripts\draw_background_tiled_horizontal.gml</script>
     <script>scripts\draw_foreground_tiled_horizontal.gml</script>
     <script>scripts\old_code_unused.gml</script>
+    <script>scripts\script0.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -104,6 +106,8 @@
         <object>objects\obj_tip_ctrl</object>
       </objects>
     </objects>
+    <object>objects\obj_lightbug</object>
+    <object>objects\obj_lightbugcontroller_basic</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\varrok1</room>
