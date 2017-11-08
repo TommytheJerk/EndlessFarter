@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>10</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,46 +25,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//ps_bg=part_system_create()
-//part_system_depth(ps_bg,10)
-//p_smoke=part_type_create()
-//part_type_life(p_smoke,325,485)
-//part_type_alpha2(p_smoke,0.25,0)
-//part_type_sprite(p_smoke,spr_smoke,0,0,0)
-//part_type_size(p_smoke,0.01,0.05,0.01,0.001)
-//part_type_gravity(p_smoke,0.001,0)
-//part_type_direction(p_smoke,85,95,0,0)
-//part_type_speed(p_smoke,0.75,1.25,0,0)
-//part_type_orientation(p_smoke,0,360,0,1,0)
-//part_type_color_hsv(p_smoke,0,255,0,128,0,128);
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-backwidth=background_get_width(background0)
+            <string>var i;
+particle_max=13
+max_phrase=6
+message="0 1 2 3 8 9 123 123123 "
+position=17
+maxposition=string_length(message)
+//Now, write a system to decipher this message.
+//We need to create the appropriate number of dots. We may as well start with the maximum number needed, which is for the figure 8.
+//For that, we need 13. ---/-_-/---/-_-/---.
+// this code actually makes an extra, which is ok.
+//We need code to decipher what the biggest phrase length is. That shouldn't be so bad.
+//We just re-use old code here.
+for (i=particle_max*max_phrase; i&gt;=0; i-=1)
+{
+lightarray[i]=instance_create(x+10,y+20,obj_lightbug)
+lightarray[i].state=0
+lightarray[i].maxphrase=max_phrase
+}
+alarm[0]=120
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="2">
+    <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -81,15 +66,18 @@ backwidth=background_get_width(background0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//part_system_position(ps_bg,view_xview[view_current]+view_wview[view_current]-1214+(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current]),0)
-//part_particles_create(p_smoke,128,room_height,p_smoke,choose(1,0,0))
-
+            <string>for (i=particle_max*max_phrase; i&gt;=0; i-=1)
+{
+lightarray[i].state=0
+lightarray[i].alpha=1
+}
+alarm[0]=120
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="5">
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -106,13 +94,22 @@ backwidth=background_get_width(background0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//part_particles_clear(ps_bg)
+            <string>for (i=particle_max*phrase_length; i&gt;=0; i-=1)
+{
+if lightarray[i].state==1
+{
+lightarray[i].x=10*xplace[i]+x+40*floor(i/particle_max)-20*phrase_length
+lightarray[i].y=10*yplace[i]+y
+lightarray[i].state=2
+}
+}
+alarm[2]=80
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -129,23 +126,59 @@ backwidth=background_get_width(background0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-/***************************************************
-  The larger the division number the faster
-  the background will move.
- ***************************************************/
+            <string>//We need to take the length reader from the script and use it here, I think.
+var key, firstpos, newpos, tempposition,i, j;
+for (i=particle_max*max_phrase; i&gt;=0; i-=1)
+{
+lightarray[i].state=0
+lightarray[i].alpha=0
+}
+phrase_length=0
+while phrase_length=0
+{
+tempposition=position
+key=string_char_at(message,tempposition)
+while key==" " &amp;&amp; tempposition&lt;string_length(message)
+{
+tempposition+=1
+key=string_char_at(message,tempposition)
+} //check firstly if we're dealing with the appropriate start; ie. not a space.
+firstpos=tempposition
+while key!=" " &amp;&amp; tempposition&lt;string_length(message)
+{
+tempposition+=1
+key=string_char_at(message,tempposition)
+}
+newpos=tempposition //now check where the end of the phrase is, starting one from where we first began.
+phrase_length=newpos-firstpos
+if phrase_length==0
+position=1 //we assume that we are at the end of the line and restart. Hopefully it works.
+}
+//Now with firstpos and newpos, we see the length of the phrase.
+//This next loop we need to repeat for as long as the phrase length. So we initiate a variable j
 
-//draw_background_tiled_horizontal(background0,view_xview[view_current]/1.05-400,view_yview[view_current]); // Draw slower layer
-backwidth=background_get_width(background0)
-draw_location=view_xview[view_current]+view_wview[view_current]-backwidth+(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
-rf_location=view_xview[view_current]+view_wview[view_current]-1214+(room_width-view_wview[view_current]-view_xview[view_current])/(room_width-view_wview[view_current])*(backwidth-view_wview[view_current])
-draw_background_tiled_horizontal(background0,draw_location,view_yview[view_current]); // Draw slower layer
-//part_system_drawit(ps_bg)
-draw_background(background1,rf_location,view_yview[view_current]); // Draw slower layer
+//The above script reads only for one letter.
+//We'll fix it later to read from any position and to automatically move forward to past next space.
+for (j=0; j&lt;phrase_length; j+=1)
+{
+script_execute(light_bug_map,message,firstpos+j,j)
+for (i=particle_max*(j+1); i&gt;=0+particle_max*j; i-=1)
+{
+lightarray[i].state=1
+lightarray[i].dir=point_direction(lightarray[i].x,lightarray[i].y,10*xplace[i]+x+40*j-20*phrase_length,10*yplace[i]+y)
+lightarray[i].dis=point_distance(lightarray[i].x,lightarray[i].y,10*xplace[i]+x+40*j-20*phrase_length,10*yplace[i]+y)
+lightarray[i].alpha=1
+if xplace[i]==-1 &amp;&amp; yplace[i]==-1
+{
+lightarray[i].state=0
+lightarray[i].alpha=0
+}
+}
+}
+alarm[1]=40
+position=newpos
 
-//If this code is unclear, ask Oddey.
-//Basically, we draw the background at the relevant view, but pushed to the left enough to push it out of view, then push it back so the right touches the right of the screen.
-//Then we account for movement, but we let the start of the view be our real room width.
+//We need to translate whatever character of the string we're at into a point.
 </string>
           </argument>
         </arguments>
