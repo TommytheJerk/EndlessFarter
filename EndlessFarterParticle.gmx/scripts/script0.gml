@@ -1,20 +1,13 @@
 var key, phase;
-//key=string_char_at(argument0,argument1)
-//while key==" " && argument1<string_length(argument0)
-//{
-//argument1+=1
-//key=string_char_at(argument0,argument1)
-//} //check firstly if we're dealing with the appropriate start; ie. not a space.
-//firstpos=argument1
-//while key!=" " && argument1<string_length(argument0)
-//{
-//argument1+=1
-//key=string_char_at(argument0,argument1)
-//}
-//newpos=argument1 //now check where the end of the phrase is, starting one from where we first began.
+//This script reads the letter in question and figures out where to put the lightbugs for letters.
+//there's a hard cap of 13 bugs per letter.
+//To create a letter, the form is listed below.
+//Assign an x position and a y position for particle x+phase (where phase tells the script which letter in the phrase it is)
+//Repeat until you have assigned 13 positions. Then it will be a full letter.
+//It operates in increments of one lightbug radius, so 0 and 1 mean lightbug next to another, not on top.
+//If you don't want to use all the particles, just set the ones that are not necessary to have coordinates -1,-1.
+//-1,-1 just makes them ignore their assignment.
 
-//Now with firstpos and newpos, we see the length of the phrase.
-//key=string_char_at(argument0,firstpos)
 phase=argument2*particle_max
 key=string_char_at(argument0,argument1)
 if key="0"
