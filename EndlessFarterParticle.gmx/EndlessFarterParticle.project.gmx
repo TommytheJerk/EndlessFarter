@@ -114,6 +114,7 @@
     <room>rooms\tutorial</room>
     <room>rooms\emptyRoomTemplate</room>
     <room>rooms\room1</room>
+    <room>rooms\room2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
