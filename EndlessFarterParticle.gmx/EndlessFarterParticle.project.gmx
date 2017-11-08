@@ -112,6 +112,8 @@
   <rooms name="rooms">
     <room>rooms\varrok1</room>
     <room>rooms\tutorial</room>
+    <room>rooms\emptyRoomTemplate</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
