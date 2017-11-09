@@ -27,9 +27,9 @@
             <kind>1</kind>
             <string>var i;
 particle_max=13 //DO NOT touch.
-max_phrase=6 //TPYE maximum word length.
-message="0 1 2 3 8 9 123 123123 " //TYPE your message hear. End with a space.
-position=17 //SPECIFY starting position, usually 1 is fine.
+max_phrase=1 //TPYE maximum word length.
+message="0 1 2 3 4 5 6 7 8 9 " //TYPE your message hear. End with a space.
+position=1 //SPECIFY starting position, usually 1 is fine.
 maxposition=string_length(message)
 //Now, write a system to decipher this message.
 //We need to create the appropriate number of dots. We may as well start with the maximum number needed, which is for the figure 8.
