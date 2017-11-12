@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>var i;
 particle_max=13 //DO NOT touch.
-max_phrase=1 //TPYE maximum word length.
-message="0 1 2 3 4 5 6 7 8 9 " //TYPE your message hear. End with a space.
+max_phrase=3 //TPYE maximum word length.
+message="ABC DEF GHI JKL M " //TYPE your message hear. End with a space. PLEASE type in all-Caps
 position=1 //SPECIFY starting position, usually 1 is fine.
 maxposition=string_length(message)
 //Now, write a system to decipher this message.
