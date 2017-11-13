@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>var i;
 particle_max=13 //DO NOT touch.
-max_phrase=3 //TPYE maximum word length.
-message="ABC DEF GHI JKL M " //TYPE your message hear. End with a space. PLEASE type in all-Caps
+max_phrase=7 //TPYE maximum word length.
+message="ABCDEF GHIJKL MNOPQR STUVWX YZ ALL LETTERS READY " //TYPE your message hear. End with a space. PLEASE type in all-Caps
 position=1 //SPECIFY starting position, usually 1 is fine.
 maxposition=string_length(message)
 //Now, write a system to decipher this message.
@@ -103,7 +103,7 @@ lightarray[i].y=10*yplace[i]+y
 lightarray[i].state=2
 }
 }
-alarm[2]=80
+alarm[2]=200
 </string>
           </argument>
         </arguments>

@@ -76,15 +76,15 @@ dir=random(360)/360*2*pi
             <kind>1</kind>
             <string>if alpha==1
 {
-fade=fade+0.1
+fade=fade+0.0075
 if fade&gt;1
 fade=1
 }
 if alpha==0
 {
-fade=fade-0.1
-if fade&lt;0.5
-fade=0.5
+fade=fade-0.0075
+if fade&lt;0.2
+fade=0.2
 }
 if state==0
 {
@@ -105,7 +105,7 @@ exit
 if state==2
 {
 dir=dir+(random(40)-20)/360*2*pi
-dis=0.025
+dis=0.001
 x=x+dis*cos(dir)
 y=y-dis*sin(dir)
 }
