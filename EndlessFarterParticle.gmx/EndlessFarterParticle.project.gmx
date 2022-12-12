@@ -108,6 +108,7 @@
     </objects>
     <object>objects\obj_lightbug</object>
     <object>objects\obj_lightbugcontroller_basic</object>
+    <object>objects\obj_stat_recorder</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\varrok1</room>

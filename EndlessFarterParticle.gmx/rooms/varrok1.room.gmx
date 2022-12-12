@@ -380,6 +380,7 @@
     <instance objName="obj_levelConpleted" x="20800" y="0" name="inst_92A718F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_abe" x="22944" y="352" name="inst_895F563E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lightbugcontroller_basic" x="22656" y="224" name="inst_06A0F4E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stat_recorder" x="128" y="224" name="inst_3CD822EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

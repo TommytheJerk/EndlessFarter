@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>localtime=0
+localdeaths=0
+locallevelpickups=0
+localtotpickups=0
+</string>
           </argument>
         </arguments>
       </action>
@@ -211,7 +215,7 @@ else
     
     //Details
     draw_set_font(font_oddfont);
-    draw_text_transformed(view_wport[0]/2,view_hport[0]*0.58, "T: Five hours         D: Too many         B: Not enough", 0.4, 0.4,0);
+    draw_text_transformed(view_wport[0]/2,view_hport[0]*0.58,"T: " + string(localtime) + " seconds       D: " + string(localdeaths) + "         B: " + string(localtotpickups) + "/" + string(locallevelpickups), 0.4, 0.4,0);
     draw_set_alpha(1);
     
     //Press Enter to Continue
